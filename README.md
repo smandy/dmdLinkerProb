@@ -15,7 +15,7 @@ or
 
 `dub --config=doomedToFailure`
 
-* Verify the workaround
+* Verify the workaround (should succeed this time)
 
 `dub --config=workaround`
 
