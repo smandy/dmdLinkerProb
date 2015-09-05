@@ -1,0 +1,19 @@
+{
+    "name": "dmdlinkerprob",
+    "description": "Short example to highlight linker problem.",
+    "copyright": "Copyright © 2015, andy",
+    "authors": ["andy"],
+    "dependencies": {
+        "dchip" : "~>0.1.2",
+    },
+    "targetType" : "executable",
+    "configurations" : [
+        {
+            "name" : "doomedToFailure",
+            "mainSourceFile" : "source/app.d"
+        },{
+            "name" : "workaround",
+            "versions" : ["workaround"]
+        }
+    ]
+}
