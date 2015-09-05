@@ -1,5 +1,3 @@
-
-
 # DMD Linker Prob #
 
   A linker problem I encountered earlier and resolved with the help of Adam Ruppe ( @destructionator ).
@@ -35,6 +33,8 @@ ref const(dchip.cpBody.cpBody))`
 Adam's workaround is to force dmd to pull in the definition of cpBody which (presumably) pulls in the definition of the missing function...
 
 `auto x = typeid(cpBody).toString();`
+
+Running dub with `--config=workaround` enables a version block which includes Adams workaround. So the code compiles.
 
 ### Emacs compilation commands ###
 
