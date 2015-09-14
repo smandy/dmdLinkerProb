@@ -50,7 +50,7 @@ Running dub with `--config=workaround` enables a version block which includes Ad
 
 So now the code compiles. All is well!
 
-### Emacs compilation commands ###
+#### Emacs compilation commands ####
 
    Compilation commands that can be executed with 'C-x C-e' after the s-expr
 
