@@ -2,6 +2,21 @@
 
   A linker problem I encountered earlier and resolved with the help of Adam Ruppe ( @destructionator ).
 
+
+
+## TL;DR ##
+
+Run your linker error through `ddemangle`
+
+You'll get something that looks like ...
+
+`bool dchip.cpBody.cpBody.__xopEquals(ref const(dchip.cpBody.cpBody),
+ref const(dchip.cpBody.cpBody))`
+
+In your code, pull in the typeid of the offending data structure.
+
+`auto x = typeid(cpBody).toString();`
+
 ## Steps To Reproduce ##
 
 * Clone DChip from [here](https://github.com/d-gamedev-team/dchip)
