@@ -45,7 +45,7 @@ explicitly ...
 
 Running dub with `--config=workaround` enables a version block which includes Adams workaround.
 
-So the code compiles.
+So now the code compiles. All is well!
 
 ### Emacs compilation commands ###
 
