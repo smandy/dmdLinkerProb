@@ -25,7 +25,7 @@ Good question :-) It looks like copying a pointer to a cpBody struct in the line
 
 `bods ~= bod;`
 
-is causing DMD to insert a reference to the cpBody structs Typeinfo which fails to link.
+is causing DMD to insert a reference to the cpBody structs TypeInfo which fails to link.
 
 `Linking...
 .dub/build/doomedToFailure-debug-linux.posix-x86_64-dmd_2068-526FACB894EDABA2E3C35CF8E3068673/dmdlinkerprob.o:(.data._D30TypeInfo_S5dchip6cpBody6cpBody6__initZ+0x38): undefined reference to _D5dchip6cpBody6cpBody11__xopEqualsFKxS5dchip6cpBody6cpBodyKxS5dchip6cpBody6cpBodyZb
@@ -41,7 +41,7 @@ ref const(dchip.cpBody.cpBody))`
 
 ## How do we fix it?? ##
 
-Adam's workaround is to force DMD to pull in the the cpBody's typeinfo
+Adam's workaround is to force DMD to pull in the the cpBody's TypeInfo
 explicitly ...
 
 `auto x = typeid(cpBody).toString();`
