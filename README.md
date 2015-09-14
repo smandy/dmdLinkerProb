@@ -31,8 +31,8 @@ is causing DMD to insert a reference to the cpBody structs Typeinfo which fails 
 .dub/build/doomedToFailure-debug-linux.posix-x86_64-dmd_2068-526FACB894EDABA2E3C35CF8E3068673/dmdlinkerprob.o:(.data._D30TypeInfo_S5dchip6cpBody6cpBody6__initZ+0x38): undefined reference to _D5dchip6cpBody6cpBody11__xopEqualsFKxS5dchip6cpBody6cpBodyKxS5dchip6cpBody6cpBodyZb
 collect2: error: ld returned 1 exit status`
 
-(If you're curious comment out this line. The project will compile
-verifying that this is the problematic line in the code.)
+(If you're curious comment out the `bods ~= bod;` line. The project
+will compile - verifying this one to be the problematic line.)
 
 Running `ddemangle` on the linker error shows that the bad function is.
 
